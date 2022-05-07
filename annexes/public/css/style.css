@@ -1,0 +1,291 @@
+@import url('/public/googleFonts/Poppins/Poppins-BlackItalic.ttf');
+@import url('/public/googleFonts/Rubik/Rubik-Italic-VariableFont_wght.ttf');
+@import url('/public/googleFonts/Rubik/Rubik-VariableFont_wght.ttf');
+:root{
+    /* couleur de background */
+    --success-bg-color: #18bc9c;
+    --global-bg-color: #f0f0f0;
+    /* couleurs */
+    --color-page: #18bc9c;
+    --color-white : #fff;
+    --color-gray:#6c757d;
+    /* Couleur de hover */
+    --hover-color: #2c3e50;
+    --first-hover-color:#1ec36dd9;
+}
+
+*,html,body{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+body a{
+    color: inherit;
+    text-decoration: none;
+}
+body a:hover{
+    text-decoration: none;
+}
+main{
+    width: 100% !important;
+    min-height: 90vh;
+    margin-top: 75px;
+    background: var(--global-bg-color);
+}
+/* Typography classes*/
+.font-poppins {
+    font-family: "Poppins", cursive;
+}
+  .font-rubik {
+    font-family: "Rubik";
+  }
+  .font-rubik-italic{
+      font-family: "Rubik Italic",cursive;
+  }
+
+/* header */
+
+.navbar-dark a:hover{
+    color: var(--hover-color);
+}
+.navbar-brand img,.profil{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+img.profil{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+.navbar-toggler{
+    border: 1px solid white !important; 
+
+}
+
+.navbar-collapse ul{
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+     align-items: flex-end;
+}
+.navbar-collapse ul li{
+    font-size: large;
+}
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url(../images/barniere.jpg) no-repeat center/100% 100%;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+.jumbotron .contenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--color-white);
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+}
+.jumbotron .contenu .center{
+    position: absolute;
+    top: 25%;
+    left: 18%;
+    width: 70%;
+}
+.jumbotron .contenu .center h1{
+    font-style: italic;
+}
+
+/* Les articles */
+.articles{
+    width: 100%;
+    margin-left: 20px;
+}
+.articles-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.article-list{
+    width: auto;
+    outline: hidden;
+    text-align: left;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; */
+}
+@media screen and (max-width: 760px){
+    .articles-content,.article-show{
+   display: block;
+    }
+    .artcle-list{
+        width:100%;
+        display: block;
+    }
+    .categorie-list{
+        max-width: 100% !important;
+        margin: 15px;
+    }
+    .article-wrapper{
+        width:100% !important;
+    }
+    .afficher-categorie-list{
+        display:none;
+    }
+}
+.article-item{
+    max-width: 300px; 
+    /* background: rgb(222, 204, 204); */
+     margin: 0 0 20px 10px;  
+    display: inline-block;
+   vertical-align: top;
+   background: var(--color-white);
+
+}
+.article-item .head{
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+}
+.article-item .head img{
+    width: 300px;
+    height: 220px;
+}
+.article-item .content{
+    text-align: justify;
+    margin: 0;
+    width: 100%;
+    height:220px ;
+    padding: 0 15px;
+}
+.article-wrapper{
+    width:70% ;
+}
+.content small{
+    color: darkgrey;
+}
+.content small span{
+    color: rgb(23, 196, 167);
+}
+.categorie-list{
+    max-width: 300px !important;
+    margin-left: 15px;
+    padding: 0 15px;
+    background: var(--color-white);
+}
+.btn-cat{
+    border-bottom: 1px solid var(--color-page);
+    color: var(--color-page);
+  }
+  .btn-cat:hover{
+      color: var(--color-gray);
+  }
+
+/* Page d'Affichage */
+.article-show{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 90px;
+}
+/* .article-show .head{
+    height: 350px;
+    width: 1020px;
+} */
+.article-show .container .head img{
+    width: 100%;
+    height: 400px;
+}
+.article-body{
+    background: var(--color-white);
+    padding: 0 15px;
+}
+/* Page des utilisateurs */
+main.form-contenant{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/logo.jpg") no-repeat fixed center ;
+    background-size: cover; 
+}
+.form-contenu{
+    background: var(--color-white);
+    width: 400px;
+    padding: 0 20px 5px 20px;
+
+}
+.form-contenu form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.form-contenu .form-group{
+    width: 100% !important;
+}
+/* Back-Office */
+.a-contenant{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+.a-contenu{
+    position: absolute;
+    right: 0;
+    background: var(--color-white);
+    width: 70%;
+    padding: 20px;
+}
+.left-sidebar {
+    position: fixed;
+    width: 25%;
+    min-height: 90vh;
+    background: #234a57;
+  }
+  
+  .left-sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: var(--color-white);
+  }
+  
+.left-sidebar ul li a {
+    font-family: 'Rubik Italic' !important;
+    font-size: larger;
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid #004044;
+  }
+  
+.left-sidebar ul li a:hover {
+    background: #004044;
+  }
+ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+  }
+
+/* Le pied de pâge */
+/* Footer */
+
+footer hr{
+    border: 1px solid #fff;
+}
